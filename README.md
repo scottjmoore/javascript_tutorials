@@ -2,3 +2,8 @@
 
 # javascript_tutorials
 JavaScript tutorials
+
+[index.html]: http://js.scottmooresoftware.com
+[async.html]: http://js.scottmooresoftware.com/async.html
+[canvas.html]: http://js.scottmooresoftware.com/canvas.html
+[oop.html]: http://js.scottmooresoftware.com/oop.html
