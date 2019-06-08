@@ -3,7 +3,7 @@
 # javascript_tutorials
 JavaScript tutorials
 
-default: http://js.scottmooresoftware.com
+Default: http://js.scottmooresoftware.com
 Async: http://js.scottmooresoftware.com/async.html
 Canvas: http://js.scottmooresoftware.com/canvas.html
 OOP: http://js.scottmooresoftware.com/oop.html
