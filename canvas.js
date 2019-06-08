@@ -7,9 +7,9 @@ const img = new Image();
 const url = "https://js.scottmooresoftware.com/.netlify/functions/test"
 
 fetch(url)
-    .then(data => { return data.body()})
+    .then(data => { return data.body})
     .then(res => { console.log(res)});
-    
+
 if (canvas.getContext) {
     const ctx = canvas.getContext('2d');
 
