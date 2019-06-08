@@ -12,24 +12,24 @@ if (canvas.getContext) {
 
     img.onload = function () {
         ctx.save();
-        ctx.translate(32, 32);
+        ctx.translate(64, 64);
         ctx.rotate(45 * TO_RADIANS);
-        ctx.drawImage(img, -32, -32, 64, 64);
+        ctx.drawImage(img, -64, -64, 128, 128);
         ctx.restore();
         ctx.save();
-        ctx.translate(128, 128);
+        ctx.translate(256, 256);
         ctx.rotate(135 * TO_RADIANS);
-        ctx.drawImage(img, -32, -32, 64, 64);
+        ctx.drawImage(img, -64, -64, 128, 128);
         ctx.restore();
         ctx.save();
-        ctx.translate(32, 128);
+        ctx.translate(64, 256);
         ctx.rotate(225 * TO_RADIANS);
-        ctx.drawImage(img, -32, -32, 64, 64);
+        ctx.drawImage(img, -64, -64, 128, 128);
         ctx.restore();
         ctx.save();
-        ctx.translate(128, 32);
+        ctx.translate(256,64);
         ctx.rotate(315 * TO_RADIANS);
-        ctx.drawImage(img, -32, -32, 64, 64);
+        ctx.drawImage(img, -64, -64, 128, 128);
         ctx.restore();
         }
     img.src = "img/mario.png";
