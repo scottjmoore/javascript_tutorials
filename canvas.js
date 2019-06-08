@@ -17,6 +17,6 @@ if (canvas.getContext) {
         ctx.drawImage(img, -32, -32, 64, 64);
         ctx.restore();
         }
-    img.src = "mario.png";
+    img.src = "img/mario.png";
 }
   
