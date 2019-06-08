@@ -7,7 +7,7 @@ const img = new Image();
 const url = "https://js.scottmooresoftware.com/.netlify/functions/test"
 
 fetch(url)
-    .then(data => { return data.body})
+    .then(data => { return data.json()})
     .then(res => { console.log(res)});
 
 if (canvas.getContext) {
