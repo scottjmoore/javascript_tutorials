@@ -14,57 +14,57 @@ var drawMarios = (rotation) => {
         ctx.drawImage(background, -rotation, -rotation, background.width * 4, background.height * 4);
 
         ctx.save();
-        ctx.translate(32, 32);
+        ctx.translate(64, 64);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(128, 128);
+        ctx.translate(256, 256);
         ctx.rotate((135 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(32, 128);
+        ctx.translate(64, 256);
         ctx.rotate((225 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(128,32);
+        ctx.translate(256, 64);
         ctx.rotate((315 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(224, 32);
+        ctx.translate(448, 64);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(32, 224);
+        ctx.translate(64, 448);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(224, 128);
+        ctx.translate(448, 256);
         ctx.rotate((225 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(224, 224);
+        ctx.translate(448, 448);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(128, 224);
+        ctx.translate(256, 448);
         ctx.rotate((315 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -32, -32, 64, 64);
+        ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
     }
 }
