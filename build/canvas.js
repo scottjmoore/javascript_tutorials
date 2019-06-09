@@ -11,7 +11,7 @@ var drawMarios = (rotation) => {
         ctx.fillStyle = '#ccc';
         ctx.fillRect(0, 0, 512, 512);
 
-        ctx.drawImage(background, -rotation, -512, background.width * 2, background.height * 2);
+        ctx.drawImage(background, -rotation, -rotation, background.width * 4, background.height * 4);
 
         ctx.save();
         ctx.translate(32, 32);
@@ -73,11 +73,19 @@ var rotation = 0;
 
 var gameLoop = () => {
     window.requestAnimationFrame(gameLoop);
-    drawMarios(rotation += 2);
+    drawMarios(rotation += 1);
 }
 
 mario.src = "img/mario.png";
 background.src = "img/background2.png"
+
+window.addEventListener("resize", () => {
+    canvas.width  = window.innerWidth - 16;
+    canvas.height = window.innerHeight - 96;
+});
+
+canvas.width  = window.innerWidth - 16;
+canvas.height = window.innerHeight - 96;
 gameLoop();
 
   
