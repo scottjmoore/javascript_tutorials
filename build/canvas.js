@@ -6,12 +6,22 @@ const ctx = canvas.getContext('2d');
 const mario = new Image();
 const background = new Image();
 
+var mouseX = 0;
+var mouseY = 0;
+
 var drawMarios = (rotation) => {
     if (ctx) {
         ctx.fillStyle = '#ccc';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.drawImage(background, -rotation, -rotation, background.width * 4, background.height * 4);
+
+        ctx.save();
+        ctx.translate(mouseX, mouseY);
+        ctx.translate(0, 0);
+        ctx.rotate((45 + rotation) * TO_RADIANS);
+        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.restore();
 
         ctx.save();
         ctx.translate(64, 64);
@@ -79,13 +89,19 @@ var gameLoop = () => {
 mario.src = "img/mario.png";
 background.src = "img/background2.png"
 
-window.addEventListener("resize", () => {
+window.addEventListener("resize", (e) => {
     canvas.width  = window.innerWidth - 16;
     canvas.height = window.innerHeight - 96;
 });
 
 canvas.width  = window.innerWidth - 16;
 canvas.height = window.innerHeight - 96;
+
+canvas.onmousemove = (e) => {
+    mouseX = e.pageX - 16;
+    mouseY = e.pageY - 64;
+};
+
 gameLoop();
 
   
