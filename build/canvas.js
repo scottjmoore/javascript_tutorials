@@ -21,7 +21,7 @@ var drawMarios = (rotation) => {
 
         ctx.save();
         ctx.translate(256, 256);
-        ctx.rotate((135 + rotation) * TO_RADIANS);
+        ctx.rotate((135 + (rotation * 0.5)) * TO_RADIANS);
         ctx.drawImage(mario, -64, -64, 128, 128);
         ctx.restore();
 
