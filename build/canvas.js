@@ -11,60 +11,60 @@ var drawMarios = (rotation) => {
         //ctx.fillStyle = '#ccc';
         //ctx.fillRect(0, 0, 512, 512);
 
-        ctx.drawImage(background, -rotation, -1024, background.width * 4, background.height * 4);
+        ctx.drawImage(background, -rotation, -512, background.width * 2, background.height * 2);
 
         ctx.save();
-        ctx.translate(64, 64);
+        ctx.translate(32, 32);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(256, 256);
+        ctx.translate(128, 128);
         ctx.rotate((135 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(64, 256);
+        ctx.translate(32, 128);
         ctx.rotate((225 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(256,64);
+        ctx.translate(128,32);
         ctx.rotate((315 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(448, 64);
+        ctx.translate(224, 32);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(64, 448);
+        ctx.translate(32, 224);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(448, 256);
+        ctx.translate(224, 128);
         ctx.rotate((225 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(448, 448);
+        ctx.translate(224, 224);
         ctx.rotate((45 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
 
         ctx.save();
-        ctx.translate(256, 448);
+        ctx.translate(128, 224);
         ctx.rotate((315 + rotation) * TO_RADIANS);
-        ctx.drawImage(mario, -64, -64, 128, 128);
+        ctx.drawImage(mario, -32, -32, 64, 64);
         ctx.restore();
     }
 }
@@ -73,7 +73,7 @@ var rotation = 0;
 
 var gameLoop = () => {
     window.requestAnimationFrame(gameLoop);
-    drawMarios(rotation += 2);
+    drawMarios(rotation += 1);
 }
 
 mario.src = "img/mario.png";
