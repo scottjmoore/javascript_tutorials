@@ -14,22 +14,22 @@ var drawMarios = (rotation) => {
         img.onload = function () {
             ctx.save();
             ctx.translate(64, 64);
-            ctx.rotate(45 * TO_RADIANS);
+            ctx.rotate((45 + rotation) * TO_RADIANS);
             ctx.drawImage(img, -64, -64, 128, 128);
             ctx.restore();
             ctx.save();
             ctx.translate(256, 256);
-            ctx.rotate(135 * TO_RADIANS);
+            ctx.rotate((135 + rotation) * TO_RADIANS);
             ctx.drawImage(img, -64, -64, 128, 128);
             ctx.restore();
             ctx.save();
             ctx.translate(64, 256);
-            ctx.rotate(225 * TO_RADIANS);
+            ctx.rotate((225 + rotation) * TO_RADIANS);
             ctx.drawImage(img, -64, -64, 128, 128);
             ctx.restore();
             ctx.save();
             ctx.translate(256,64);
-            ctx.rotate(315 * TO_RADIANS);
+            ctx.rotate((315 + rotation) * TO_RADIANS);
             ctx.drawImage(img, -64, -64, 128, 128);
             ctx.restore();
         }
@@ -38,5 +38,5 @@ var drawMarios = (rotation) => {
     }
 }
 
-drawMarios(1);
+drawMarios(-45);
   
