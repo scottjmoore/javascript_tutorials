@@ -38,5 +38,14 @@ var drawMarios = (rotation) => {
     }
 }
 
-drawMarios(-45);
+var rotation = 0;
+
+var gameLoop = () => {
+    window.requestAnimationFrame(gameLoop);
+    drawMarios(rotation++);
+}
+
+window.requestAnimationFrame(gameLoop);
+
+
   
