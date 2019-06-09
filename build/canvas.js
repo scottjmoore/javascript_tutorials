@@ -13,7 +13,7 @@ fetch(url)
 if (canvas.getContext) {
     const ctx = canvas.getContext('2d');
 
-    ctx.fillStyle = 'blue';
+    ctx.fillStyle = '#ccc';
     ctx.fillRect(0, 0, 512, 512);
 
     img.onload = function () {
