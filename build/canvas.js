@@ -9,7 +9,7 @@ const background = new Image();
 var drawMarios = (rotation) => {
     if (ctx) {
         ctx.fillStyle = '#ccc';
-        ctx.fillRect(0, 0, 512, 512);
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.drawImage(background, -rotation, -rotation, background.width * 4, background.height * 4);
 
@@ -73,7 +73,7 @@ var rotation = 0;
 
 var gameLoop = () => {
     window.requestAnimationFrame(gameLoop);
-    drawMarios(rotation += 1);
+    drawMarios(rotation += 2);
 }
 
 mario.src = "img/mario.png";
